@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>myapp</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="/assets/styles/bootstrap.min.css" rel="stylesheet">
+  <script src="/assets/scripts/bootstrap.bundle.min.js"></script>
+</head>
+<body >
+  <div class="container-fluied">
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="text-center">
+                    <h1>Signup</h1>
+                    <h6>Register Yourself  !!</h6>
+
+                </div>
+                
+                    <form [formGroup]="signupForm" (ngSubmit)="signUp()">
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">User Name</label>
+                            <input formControlName="username" type="text" class="form-control" id="exampleInputPassword1">
+                          </div>
+                          <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input formControlName="password" type="password" class="form-control" id="exampleInputPassword1">
+                          </div>
+                          <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">ContactNumber</label>
+                            <input formControlName="contactnumber" type="number" class="form-control" id="exampleInputPassword1">
+                          </div>
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label">Email</label>
+                          <input formControlName="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputPassword1" class="form-label">Question</label>
+                          <input formControlName="question" type="text" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Answer</label>
+                            <input formControlName="answer" type="text" class="form-control" id="exampleInputPassword1">
+                          </div>
+                          <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Role</label>
+                            <input formControlName="role" type="text" class="form-control" id="exampleInputPassword1">
+                          </div>
+                        <div class="mb-3 form-check">
+                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary mb-2">Signup</button>
+                      </form>
+                      <a style="color:ghostwhite; margin-top:10px" routerLink="/login">Already register? Click to Login!!</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+</body>

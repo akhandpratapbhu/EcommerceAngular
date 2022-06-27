@@ -1,0 +1,16 @@
+<div class="container-fluied">
+<div class="container">
+    <div class="row">
+      <ng-container *ngFor="let item of data">
+       <div class="card col-md-4">
+        <a href="category/{{item.categoryid}}"> <img src="{{item.picture}} " alt=""></a>
+         <h5>{{item.title}}</h5>
+         <p>Rs.{{item.unitprice}}</p>
+         <p>{{item.description}}</p>
+         <a href="details/{{item.productid}}"><button class="btn btn-primary">Details product</button>
+         </a>          
+
+       </div>
+      </ng-container>
+    </div>
+   

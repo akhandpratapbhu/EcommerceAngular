@@ -1,0 +1,31 @@
+<div class="container">
+    
+    <hr>
+    <table class="table">
+      <thead>
+        <tr>
+          <!-- <th scope="col">#</th> -->
+          <th scope="col">Delivery Id</th>
+          <th scope="col">Status</th>
+          <th scope="col">Order ID</th>
+          <th scope="col">Shipper ID</th>
+          <th scope="col">Action</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let deliveries of deliveriesData; let i=index">
+          <!-- <th scope="row">{{i+1}}</th> -->
+          <td>{{deliveries.deliveryid }}</td>
+          <td>{{deliveries.status  }}</td>
+          <td>{{deliveries.orderid}}</td>
+          <td>{{deliveries.shipperid	}}</td>   
+          
+        <td><a href="/delivery/{{deliveries.deliveryid}}" ><button class="btn btn-primary">view</button></a></td>
+        </tr>
+        <td><a href="/order" ><button class="btn btn-primary">Order</button></a></td>
+
+      </tbody>
+    </table>
+  </div>
+  

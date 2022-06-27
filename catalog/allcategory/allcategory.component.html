@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="row">
+      <ng-container *ngFor="let item of categoryList">
+       <div class="card col-md-2">
+         <a href="category/{{item.categoryid}}"><img src={{item.picture}}>
+         </a>
+         <h5>{{item.title}}</h5>
+         </div>
+      </ng-container>
+     
+    </div>
+ 

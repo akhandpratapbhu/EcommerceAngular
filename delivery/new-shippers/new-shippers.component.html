@@ -1,0 +1,103 @@
+<div class="container">
+  <h2 class="text-center">New shippers Add</h2>
+  <form class="form-horizontal form1" [formGroup]="shiperForm" (ngSubmit)="shiperSubmit()">
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="shipperid"
+        >shipper ID :</label
+      >
+      <div class="col-sm-10">
+        <input
+          type="number"
+          class="form-control"
+          id="shipperid	"
+          placeholder="Enter shipper ID"
+          formControlName="shipperid"
+        />
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="userid ">user ID :</label>
+      <div class="col-sm-10">
+        <input
+          type="text"
+          class="form-control"
+          id="userid"
+          placeholder="Enter user ID "
+          formControlName="userid"
+        />
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="email	">Email :</label>
+      <div class="col-sm-10">
+        <input
+          type="email"
+          class="form-control"
+          id="email	"
+          placeholder="Enter Email ID"
+          formControlName="email"
+        />
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="contactnumbe"
+        >Contact Numbe:</label
+      >
+      <div class="col-sm-10">
+        <input
+          type="number"
+          class="form-control"
+          id="contactnumbe"
+          placeholder="Enter Contact Numbe" formControlName="contactnumbe"
+        />
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="organization	 	"
+        >Organization :</label
+      >
+      <div class="col-sm-10">
+        <input
+          type="text"
+          class="form-control"
+          id="organization"
+          placeholder="Enter Organization" formControlName="organization"
+        />
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-default">Submit</button>
+      </div>
+    </div>
+  </form>
+
+  <hr>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Shiper Id</th>
+        <th scope="col">User Id</th>
+        <th scope="col">Email</th>
+        <th scope="col">Contact</th>
+        <th scope="col">Organization</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let shiper of shipersData; let i=index">
+        <th scope="row">{{i+1}}</th>
+        <td>{{shiper.shipperid}}</td>
+        <td>{{shiper.userid}}</td>
+        <td>{{shiper.email}}</td>
+        <td>{{shiper.contactnumbe}}</td>
+        <td>{{shiper.organization}}</td>
+        <td> <button class="btn btn-danger" (click)="deleteShiper(shiper.shipperid)">Delete</button> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

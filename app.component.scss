@@ -1,0 +1,23 @@
+.form-control{
+    border-radius: 5px;
+    margin-left: 25px;
+    width: 600px;
+}
+.search-icon{
+    z-index: 10;
+    position: absolute;
+    right:43%;
+    color: rgb(91, 91, 188);
+    top: 31%;
+
+}
+.navbar-brand{
+    color: aqua;
+}
+
+.nav-link{
+
+   color: antiquewhite;
+}
+
+.fixed-nav-bar { position: fixed; top: 0; left: 0; z-index: 9999; width: 100%; height: 50px; background-color: #00a087; }

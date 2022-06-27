@@ -1,0 +1,125 @@
+
+<nav class=" fixed-nav-bar navbar navbar-expand-lg navbar-light bg-blue">
+  <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+          aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <a class="navbar-brand" href="#">DiveShop</a>
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="add-product">Add Product</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="product" tabindex="-1" aria-disabled="true">Manage Product</a>
+              </li>
+
+
+          </ul>
+          <form class="d-flex">
+              <ul class="navbar-nav me-auto  mb-2 mb-lg-0">
+                  <li class="nav-item">
+                      <input class="form-control me-2" type="search" placeholder="Search" name="title"
+                          [(ngModel)]="title" (ngModelChange)="search()" aria-label="Search">
+                  </li>
+
+                  <li class="nav-item">
+                      <a class="nav-link mr-10px" href="cart" tabindex="-1" aria-disabled="true">Cart ({{cartProducts}})</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link mr-10px" href="login" tabindex="-1" aria-disabled="true">Login</a>
+                  </li>
+              </ul>
+
+          </form>
+      </div>
+  </div>
+</nav>
+
+
+
+<div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+    <!-- Indicators/dots -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="4"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="5"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="6"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="7"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="8"></button>
+    </div>
+    
+    <!-- The slideshow/carousel -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <a href="details/23"> <img src="/assets/images/bag.jpg" alt="Los Angeles" class="d-block" style="width:100%"></a>
+      </div>
+      <div class="carousel-item">
+        <a href="details/31"> <img src="/assets/images/background.webp" alt="Chicago" class="d-block" style="width:100%">
+        </a></div>
+      <div class="carousel-item">
+        <a href="details/30"> <img src="/assets/images/watch.webp" alt="New York" class="d-block" style="width:100%">
+     </a> </div>
+     
+      <div class="carousel-item">
+        <a href="details/23"> <img src="/assets/images/bag.jpg" alt="Chicago" class="d-block" style="width:100%">
+        </a> </div>
+      <div class="carousel-item">
+        <a href="details/32">   <img src="/assets/images/design.webp" alt="New York" class="d-block" style="width:100%">
+     </a> </div>
+      <div class="carousel-item">
+        <a href="details/33">  <img src="/assets/images/sandle.webp" alt="Los Angeles" class="d-block" style="width:100%">
+        </a> </div>
+      <div class="carousel-item">
+        <a href="details/7">   <img src="/assets/images/Shirt.jpg" alt="Chicago" class="d-block" style="width:100%">
+        </a>
+        </div>
+      <div class="carousel-item">
+        <a href="details/34"> <img src="/assets/images/sandle1.webp" alt="New York" class="d-block" style="width:100%">
+        </a> </div>
+      <div class="carousel-item ">
+        <a href="details/35">  <img src="/assets/images/shoes.webp" alt="Los Angeles" class="d-block" style="width:100%">
+        </a> </div>
+     
+      <div class="carousel-item">
+        <a href="details/36">  <img src="/assets/images/smallsandle.jpg" alt="New York" class="d-block" style="width:100%">
+        </a> </div>
+    </div>
+    
+    <!-- Left and right controls/icons -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+      <!-- cards -->
+      <div class="container-fluied">
+    <app-allcategory></app-allcategory>
+  </div>
+    <div class="container-fluied">
+ <div class="container">
+   <div class="row">
+     <ng-container *ngFor="let item of productList">
+      <div class="card col-md-3">
+        <img src="{{item.picture}} " alt="">
+        <h5>{{item.title}}</h5>
+        <p>Rs.{{item.unitprice}}</p>
+        <p></p>
+        <a href="details/{{item.productid}}"> <button class="btn btn-primary">View Details</button>
+        </a>
+        </div>
+     </ng-container>
+    
+   </div>
+</div>
+</div>

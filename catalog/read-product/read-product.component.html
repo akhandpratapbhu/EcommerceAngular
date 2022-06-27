@@ -1,0 +1,29 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">productId</th>
+        <th scope="col">title</th>
+        <th scope="col">description</th>
+        <th scope="col">unitprice</th>
+        <th scope="col">categoryid</th>
+        <th scope="col">supplierid</th>
+        <th scope="col">available</th>
+        <th scope="col">Edits</th>
+        <th scope="col">Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let us of readData">
+        <th>{{ us.productid }}</th>
+        <td>{{ us.title }}</td>
+        <td>{{ us.description }}</td>
+        <td>Rs.{{ us.unitprice }}</td>
+        <td>{{ us.categoryid }}</td>
+        <td>{{ us.supplierid }}</td>
+        <td>{{ us.available }}</td>
+     <td> <a href="add-product/{{us.productid}}"> <button class="btn btn-primary">Edit Product</button></a></td>
+        <td><button class="btn btn-danger" (click)="deleteID(us.productid)">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+  

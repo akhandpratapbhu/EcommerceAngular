@@ -1,0 +1,67 @@
+.container{
+
+    position:absolute;
+
+    top: -100px;
+
+    left:50%;
+
+    transform:translateX(-50%)translateY(-50%);
+
+     transform:translateX(-50%)translateY(-50%);
+
+     background-image: url('/assets/baby/baby.jpg');
+
+}
+
+
+
+
+
+
+
+
+
+
+
+.card{
+
+    border:none;
+
+    width: 500px;
+
+    padding: 40px;
+
+    position: absolute;
+
+    top:50%;
+
+    left:50%;
+
+    transform: translate(-50%,50%);
+
+    background: hsla(hue, saturation, lightness, alpha);
+
+    background:linear-gradient(90deg,hsla(205,46%,30%,1)0%,hsla(250,29%,36%,1)100%);
+
+}
+
+.card  h1,h6{
+
+    color:azure;
+
+}
+
+label{
+
+    color:azure;
+
+}
+
+.btn-primary{
+    margin-bottom: 15px;
+}
+.form-text {
+
+    color: white;
+}

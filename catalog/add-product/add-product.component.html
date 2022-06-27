@@ -1,0 +1,81 @@
+<div class="container add mt-5">
+    <div *ngIf="errorMsg" class="alert alert-danger" role="alert">
+      {{ errorMsg }}
+    </div>
+  
+    <div *ngIf="successMsg" class="alert alert-success" role="alert">
+      {{ successMsg }}
+    </div>
+    
+    <form [formGroup]="userForm" (ngSubmit)="userSubmit()">
+      <div class="col-lg-4 mt-2">
+        <input
+          type="text"
+          class="form-control"
+          formControlName="title"
+          name="title"
+          placeholder="productname"
+        />
+      </div>
+      <div class="col-lg-4 mt-2">
+        <input
+          type="text"
+          class="form-control"
+          formControlName="description"
+          placeholder="description"
+        />
+        <div class="col-lg-4 mt-2">
+          <input
+            type="text"
+            class="form-control"
+            formControlName="picture"
+            placeholder="picture"
+          />
+        </div>
+      </div>
+      <div class="col-lg-4 mt-2">
+        <input
+          type="number"
+          class="form-control"
+          formControlName="unitprice"
+          placeholder="unitprice"
+        />
+      </div>
+      <div class="col-lg-4 mt-2">
+        <input
+          type="number"
+          class="form-control"
+          formControlName="categoryid"
+          placeholder="categoryid"
+        />
+      </div>
+      <div class="col-lg-4 mt-2">
+        <input
+          type="number"
+          class="form-control"
+          formControlName="supplierid"
+          placeholder="supplierid"
+        />
+      </div>
+      <div class="col-lg-4 mt-2">
+        <input
+          type="number"
+          class="form-control"
+          formControlName="available"
+          placeholder="available"
+        />
+      </div>
+      <div class="col-lg-4 mt-2">
+        <input
+          type="number"
+          class="form-control"
+          formControlName="unitinstock"
+          placeholder="unitinstock"
+        />
+      </div>
+      <div class="col-lg-4 mt-2">
+        <button class="btn btn-primary">{{data.length == 0 ? "Add Product":"Edit Product"}}</button>
+      </div>
+    </form>
+  </div>
+  
